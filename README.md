@@ -28,22 +28,15 @@ $ zmore freebase-rdf-latest.gz
 <http://rdf.freebase.com/ns/american_football.football_player.footballdb_id>    <http://rdf.freebase.com/ns/type.property.unique>       "true"  .
 <http://rdf.freebase.com/ns/american_football.football_player.footballdb_id>    <http://rdf.freebase.com/ns/type.property.expected_type>        <http://rdf.freebase.com/ns/type.enumeration>   .
 <http://rdf.freebase.com/ns/american_football.football_player.footballdb_id>    <http://www.w3.org/2000/01/rdf-schema#label>    "footballdb ID"@en      .
-<http://rdf.freebase.com/ns/american_football.football_player.footballdb_id>    <http://rdf.freebase.com/ns/type.property.schema>       <http://rdf.freebase.com/ns/american_football.football_player>  .
-
 
 # You can also grep it
-$ zgrep '/ns/film.film>' -m 10 freebase-rdf-latest.gz
+$ zgrep '/ns/film.film>' -m 5 freebase-rdf-latest.gz
 
 <http://rdf.freebase.com/ns/film.film_song_relationship.film>   <http://rdf.freebase.com/ns/type.property.expected_type>    <http://rdf.freebase.com/ns/film.film>  .
 <http://rdf.freebase.com/ns/film.film_song_relationship.film>   <http://www.w3.org/2000/01/rdf-schema#range>    <http://rdf.freebase.com/ns/film.film>  .
 <http://rdf.freebase.com/ns/g.112ygbz6_>    <http://rdf.freebase.com/ns/type.object.type>   <http://rdf.freebase.com/ns/film.film>  .
 <http://rdf.freebase.com/ns/g.112ygbz6_>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://rdf.freebase.com/ns/film.film>  .
 <http://rdf.freebase.com/ns/g.113qbnjlk>    <http://rdf.freebase.com/ns/type.object.type>   <http://rdf.freebase.com/ns/film.film>  .
-<http://rdf.freebase.com/ns/g.113qbnjlk>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://rdf.freebase.com/ns/film.film>  .
-<http://rdf.freebase.com/ns/g.119pgc86w>    <http://rdf.freebase.com/ns/type.object.type>   <http://rdf.freebase.com/ns/film.film>  .
-<http://rdf.freebase.com/ns/g.119pgc86w>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://rdf.freebase.com/ns/film.film>  .
-<http://rdf.freebase.com/ns/g.119pgkfwp>    <http://rdf.freebase.com/ns/type.object.type>   <http://rdf.freebase.com/ns/film.film>  .
-<http://rdf.freebase.com/ns/g.119pgkfwp>    <http://www.w3.org/1999/02/22-rdf-syntax-ns#type>   <http://rdf.freebase.com/ns/film.film>  .
 
 ```
 
@@ -53,6 +46,33 @@ Freebase data is licensed under the [CC-BY](http://creativecommons.org/licenses/
 
 
 ## Metaweb Query Language (MQL)
+
+The Metaweb Query Language is covered briefly as a part of the [Freebase](https://en.wikipedia.org/wiki/Freebase#Overview) Wikipedia article. 
+
+For additional insight, MQL was explained by a Metaweb engineer `barakmich` on a [discourse.cayley.io technical discussion](https://discourse.cayley.io/t/query-languages-tour/191) in July 9, 2016:
+
+> **Metaweb**
+
+> When Metaweb was getting started, there was graphd. It had a nigh-incomprehensible query language, GQL, that, the theory  went, was easy for machines to compile to. As a separate service, we ran MQL, which compiled user and client queries into GQL and parsed the result back out again into . For reference, I joined in early 2008. MQL is an approximately late 2006 into 2007 creation and the query language to graphd predates that a bit.
+
+> ...
+
+> **MQL**
+
+> Anyway, to actually make something for developers, there was the Metaweb Query Language, MQL. The idea was to leverage JSON -- an uncertain bet, at the time, when JSON was still not quite a de-facto lingua franca. JSON, combined with judicious semantics around objects, nulls, keys, and values
+
+
+The rest of the write up goes over MQL in even more detail, covering various positive and negative points. Interestingly, a look back at MQL years after it was deprecated brings up some nice similarities with the more modern GraphQL by Facebook. 
+
+> ...
+
+> I want to call out how insightful it was for its day. It did JSON queries before they were cool. A tree template maps onto a graph (barring a few more advanced cases) in a surprisingly useable way. It was clever and fun. You could do a lot with a little.
+
+> **There are some clear parallels to what I know about GraphQL**, incidentally; a tree-structured template in a language that looks designer-friendly smells a lot like MQL. I'm not sure how to fully reconcile the ideas, though. Open question.
+
+> MQL was being rewritten from the ground-up when we were acquired.
+
+
 
 ### Sample MQL Scripts
 
