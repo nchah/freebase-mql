@@ -1,21 +1,20 @@
 #freebase-mql
 
-A reflection and review of [Freebase.com](http://www.freebase.com) and the (now deprecated) Metaweb Query Language (MQL). This repo is a response to the increasing attention being given to Facebook's [GraphQL](https://code.facebook.com/posts/1691455094417024), which was released in September 2015. Those who have worked with MQL before would have immediately noticed the similiarities of GraphQL with this now deprecated language. 
-
+A reflection and review of [Freebase.com](http://www.freebase.com) and the (now deprecated) Metaweb Query Language (MQL). This repo is a response to the increasing attention being given to Facebook's [GraphQL](https://code.facebook.com/posts/1691455094417024), which was released in September 2015. Those who have worked with MQL before may have immediately noticed the similiarities of GraphQL with this now deprecated language. 
 
 ## Freebase
 
 The [Freebase](https://en.wikipedia.org/wiki/Freebase) Wikipedia article provides a good overview of the knowledge base's nearly decade-long lifetime from its beginnings at Metaweb Technologies, Inc. in 2007, its acquisition by Google in 2010, and its eventual shutdown and move to Wikidata towards 2015-2016. Freebase accepted queries to its vast stores of data through the Metaweb Query Language (MQL).
 
-Although the shutdown of freebase.com was set for as early as June 30, 2015 according to this [Google+ post](https://plus.google.com/u/0/109936836907132434202/posts/bu3z2wVqcQc), the actual website could be accessed for quite a long time. On May 2, 2016, freebase.com was finally closed off as announced in this [Google Group post](https://groups.google.com/forum/#!topic/freebase-discuss/WEnyO8f7xOQ). The link now redirects to the static Freebase data dumps.
+Although the shutdown of freebase.com was set for as early as June 30, 2015 according to this [Google+ post](https://plus.google.com/u/0/109936836907132434202/posts/bu3z2wVqcQc), the actual website could still be accessed for quite a while. On May 2, 2016, freebase.com was finally closed off as announced in this [Google Group post](https://groups.google.com/forum/#!topic/freebase-discuss/WEnyO8f7xOQ). The freebase.com link now redirects to the static Freebase data dumps.
 
 A screenshot of freebase.com on May 2, 2016 before it was shut down.
 ![freebase.com screenshot](https://github.com/nchah/freebase-mql/blob/master/images/screenshot-freebase-com.png)
 
 ### What Remains: Freebase Data Dumps
 
-A data dump of 1.9 billion Freebase Triples in [N-Triples RDF](https://www.w3.org/TR/rdf-testcases/#ntriples) format is available on the [developers page](https://developers.google.com/freebase/#freebase-rdf-dumps) under the [CC-BY](http://creativecommons.org/licenses/by/2.5/) license. The [freebase.com](http://freebase.com) URL also redirects to this page following its shutdown. 
-The file is listed as being 22 GB gzip compressed and 250 GB uncompressed according to the website, although recent downloads exceed this file size (a May 2016 download amounted to >30 GB compressed and >400 GB uncompressed). 
+A data dump of 1.9 billion Freebase triples in [N-Triples RDF](https://www.w3.org/TR/rdf-testcases/#ntriples) format is available on the [developers page](https://developers.google.com/freebase/#freebase-rdf-dumps) under the [CC-BY](http://creativecommons.org/licenses/by/2.5/) license. The [freebase.com](http://freebase.com) URL also redirects to this page following its shutdown.
+The file is listed as 22 GB gzip compressed and 250 GB uncompressed on the website, but recent downloads may exceed this size (a May 2016 download amounted to >30 GB compressed and >400 GB uncompressed). 
 
 Examining the compressed data with Z commands:
 
@@ -76,7 +75,7 @@ The rest of the write up goes over MQL in even more detail, covering various pos
 
 ### MQL and GraphQL
 
-Some samples of MQL scripts that I wrote are enclosed as txt files in the mql-queries folder. At the time, I queried these MQL scripts against the Freebase API using Python. Due to Python requirements, "None" may need to be replaced with "null" in the MQL queries. 
+Some samples of MQL scripts that I wrote are enclosed as txt files in the mql-queries folder. At the time, I used Python to query these MQL scripts against the Freebase API. Due to Python requirements, "None" may need to be replaced with "null" in the MQL queries. 
 
 The [MQL Reference Guide](https://developers.google.com/freebase/mql/ch03#firstquery) presents the following as a first query using MQL.
 
@@ -138,9 +137,9 @@ The syntax has some differences but there are notable similarities in the genera
 
 ### More MQL
 
-These are some further MQL In most cases the "return" parameter is commented out with "#" (this is due to the MQL being originally written in Python scripts). The "limit" parameter is also set to a reasonable amount and would have been adjusted accordingly. 
+These are some further MQL queries. In most cases I have commented out the "return" parameter with "#" (due to the MQL being originally written in Python scripts). The "limit" parameter is also set to a reasonable amount and would have been adjusted accordingly. 
 
-Get all food dish topics (with /food/dish type)
+Get all food dish topics (topics with /food/dish type):
 ```
 {
     "name": None,
@@ -153,7 +152,7 @@ Get all food dish topics (with /food/dish type)
 }
 ```
 
-Get food dishes and their ingredients
+Get food dish topics and their ingredients:
 ```
 {
     "name": None,
@@ -170,7 +169,7 @@ Get food dishes and their ingredients
 }
 ```
 
-Get cuisine topics' dishes and their ingredients
+Get cuisine topics' dishes and their ingredients:
 ```
 {
     "name": None,
