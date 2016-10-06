@@ -4,9 +4,11 @@ A reflection and review of [Freebase.com](http://www.freebase.com) and the (now 
 
 ## Freebase
 
-The [Freebase](https://en.wikipedia.org/wiki/Freebase) Wikipedia article provides a good overview of the knowledge base's nearly decade-long lifetime from its beginnings at Metaweb Technologies, Inc. in 2007, its acquisition by Google in 2010, and its eventual shutdown and move to Wikidata towards 2015-2016. Freebase accepted queries to its vast stores of data through the Metaweb Query Language (MQL).
+The [Freebase](https://en.wikipedia.org/wiki/Freebase) Wikipedia article provides a good overview of the knowledge base's nearly decade-long lifetime from its beginnings at Metaweb Technologies, Inc. in 2007, its acquisition by Google in 2010, and its eventual shutdown and move to Wikidata towards 2015-2016. 
+Freebase data could be accessed through the Freebase API and the online Query Editor with queries written in the Metaweb Query Language (MQL).
 
-Although the shutdown of freebase.com was set for as early as June 30, 2015 according to this [Google+ post](https://plus.google.com/u/0/109936836907132434202/posts/bu3z2wVqcQc), the actual website could still be accessed for quite a while. On May 2, 2016, freebase.com was finally closed off as announced in this [Google Group post](https://groups.google.com/forum/#!topic/freebase-discuss/WEnyO8f7xOQ). The freebase.com link now redirects to the static Freebase data dumps.
+Although the shutdown of freebase.com was set for as early as June 30, 2015 according to this initial [Google+ post](https://plus.google.com/u/0/109936836907132434202/posts/bu3z2wVqcQc), the actual website was still accessible for quite a long time. 
+On May 2, 2016, freebase.com was finally closed off as announced in this [Google Group post](https://groups.google.com/forum/#!topic/freebase-discuss/WEnyO8f7xOQ). The freebase.com link now redirects to the Google Developers page for the remaining Freebase triples data dumps.
 
 A screenshot of freebase.com on May 2, 2016 before it was shut down.
 ![freebase.com screenshot](https://github.com/nchah/freebase-mql/blob/master/images/screenshot-freebase-com.png)
@@ -75,7 +77,7 @@ The rest of the write up goes over MQL in even more detail, covering various pos
 
 ### MQL and GraphQL
 
-Some samples of MQL scripts that I wrote are enclosed as txt files in the mql-queries folder. At the time, I used Python to query these MQL scripts against the Freebase API. Due to Python requirements, "None" may need to be replaced with "null" in the MQL queries. 
+Some samples of MQL scripts that I wrote are enclosed as txt files in the mql-queries folder. At the time, I used Python scripts to query the Freebase API with the MQL requests. Due to Python requirements, "None" may need to be replaced with "null" in the MQL queries. 
 
 The [MQL Reference Guide](https://developers.google.com/freebase/mql/ch03#firstquery) presents the following as a first query using MQL.
 
@@ -134,6 +136,7 @@ In comparison, the [GraphQL documentation](https://facebook.github.io/react/blog
 
 The syntax has some differences but there are notable similarities in the general nested structure and query format. The query request essentially lays out the data structure that should be returned in the response. 
 
+As of late 2016, GraphQL continues to be a topic that is brought up on some notable technical forums: Hacker News ([Search](https://hn.algolia.com/?query=GraphQL&sort=byDate&prefix&page=0&dateRange=all&type=story)), Reddit's /r/programming ([Search](https://www.reddit.com/r/programming/search?q=GraphQL&restrict_sr=on)).
 
 ### More MQL
 
@@ -203,15 +206,15 @@ I have further code to explore the Knowledge Graph API in this repository [knowl
 
 ## Sunsetting Freebase and Wikidata Migration
 
-The migration of Freebase data to Wikidata can be tracked [here](https://www.wikidata.org/wiki/Wikidata:WikiProject_Freebase). 
+The migration of Freebase data to Wikidata can be tracked [here](https://www.wikidata.org/wiki/Wikidata:WikiProject_Freebase) on wikidata.org. 
 
-I am tracking the project and any contributions in this repository [wikidata](https://github.com/nchah/wikidata).
+My personal repo to track the project and any contributions are in this [wikidata](https://github.com/nchah/wikidata) repository.
 
 . . . 
 
 ## Sources
 
-Some sources may no longer be available following the deprecation of the Freebase API on June 30, 2015. 
+Some sources may no longer be available following the deprecation of the Freebase API on June 30, 2015.
 
 ### Announcements Timeline
 
