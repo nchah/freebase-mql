@@ -54,7 +54,7 @@ For additional insight, MQL was explained by a Metaweb engineer `barakmich` on a
 
 > **Metaweb**
 
-> When Metaweb was getting started, there was graphd. It had a nigh-incomprehensible query language, GQL, that, the theory  went, was easy for machines to compile to. As a separate service, we ran MQL, which compiled user and client queries into GQL and parsed the result back out again into . For reference, I joined in early 2008. MQL is an approximately late 2006 into 2007 creation and the query language to graphd predates that a bit.
+> When Metaweb was getting started, there was graphd. It had a nigh-incomprehensible query language, GQL, that, the theory  went, was easy for machines to compile to. As a separate service, we ran MQL, which compiled user and client queries into GQL and parsed the result back out again into MQL. For reference, I joined in early 2008. MQL is an approximately late 2006 into 2007 creation and the query language to graphd predates that a bit.
 
 > ...
 
