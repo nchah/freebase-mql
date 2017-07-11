@@ -1,6 +1,8 @@
 # freebase-mql
 
-A reflection and review of [Freebase.com](http://www.freebase.com) and the (now deprecated) Metaweb Query Language (MQL). This repo is a response to the increasing attention being given to Facebook's [GraphQL](https://code.facebook.com/posts/1691455094417024), which was released in September 2015. Those who have worked with MQL before may have immediately noticed the similiarities of GraphQL with this now deprecated language. 
+A review of [Freebase.com](http://www.freebase.com) and the (now deprecated) Metaweb Query Language (MQL).
+This repo is a response to the increasing attention being given to Facebook's [GraphQL](https://code.facebook.com/posts/1691455094417024), which was released in September 2015.
+Those who are familiar with MQL may have immediately noticed the similiarities of GraphQL with this now deprecated language. 
 
 ## Freebase
 
@@ -63,7 +65,8 @@ For additional insight, MQL was explained by a Metaweb engineer `barakmich` on a
 > Anyway, to actually make something for developers, there was the Metaweb Query Language, MQL. The idea was to leverage JSON -- an uncertain bet, at the time, when JSON was still not quite a de-facto lingua franca. JSON, combined with judicious semantics around objects, nulls, keys, and values
 
 
-The rest of the write up goes over MQL in even more detail, covering various positive and negative points. Interestingly, a look back at MQL years after it was deprecated brings up some nice similarities with the more modern GraphQL by Facebook. 
+The rest of the write up goes over MQL in even more detail, covering various positive and negative points.
+Interestingly, a look back at MQL years after it was deprecated brings up some nice similarities with the more recent GraphQL by Facebook, as per this comment: 
 
 > ...
 
@@ -77,7 +80,9 @@ The rest of the write up goes over MQL in even more detail, covering various pos
 
 ### MQL and GraphQL
 
-Some samples of MQL scripts that I wrote are enclosed as txt files in the mql-queries folder. At the time, I used Python scripts to query the Freebase API with the MQL requests. Due to Python requirements, "None" may need to be replaced with "null" in the MQL queries. 
+Some samples of MQL scripts that I wrote are enclosed as txt files in the `mql-queries` folder.
+At the time, I used Python scripts to query the Freebase API with the MQL requests.
+Due to Python requirements, "None" may need to be replaced with "null" to convert it back into a "pure" MQL query. 
 
 The [MQL Reference Guide](https://developers.google.com/freebase/mql/ch03#firstquery) presents the following as a first query using MQL.
 
@@ -134,13 +139,15 @@ In comparison, the [GraphQL documentation](https://facebook.github.io/react/blog
 	}
 ```
 
-The syntax has some differences but there are notable similarities in the general nested structure and query format. The query request essentially lays out the data structure that should be returned in the response. 
+The syntax is not exactly the same, but there are notable similarities in the general nested structure and query format.
+The query request essentially lays out the data structure that should be returned in the response. 
 
 As of late 2016, GraphQL continues to be a topic that is brought up on some notable technical forums: Hacker News ([Search](https://hn.algolia.com/?query=GraphQL&sort=byDate&prefix&page=0&dateRange=all&type=story)), Reddit's /r/programming ([Search](https://www.reddit.com/r/programming/search?q=GraphQL&restrict_sr=on)).
 
 ### More MQL
 
-These are some further MQL queries. In most cases I have commented out the "return" parameter with "#" (due to the MQL being originally written in Python scripts). The "limit" parameter is also set to a reasonable amount and would have been adjusted accordingly. 
+These are some further MQL queries. In most cases I have commented out the "return" parameter with "#" (due to the MQL being originally written in Python scripts).
+The "limit" parameter is also set to a reasonable amount and would have been adjusted accordingly. 
 
 Get all food dish topics (topics with /food/dish type):
 ```
@@ -199,18 +206,9 @@ Get cuisine topics' dishes and their ingredients:
 
 ## From Freebase to Google's Knowledge Graph
 
-Following the deprecation of the Freebase APIs, the new Knowledge Graph Search API (KG API) was released by Google on December 16, 2015 ([Google+ post](https://plus.google.com/u/0/109936836907132434202/posts/iY8NZGFF6DN)). As of April 2016, the new KG API does not support queries written in MQL as it did on Freebase. 
+Following the deprecation of the Freebase APIs, the new Knowledge Graph Search API (KG API) was released by Google on December 16, 2015 ([Google+ post](https://plus.google.com/u/0/109936836907132434202/posts/iY8NZGFF6DN)). 
+As of April 2016, the new KG API does not support queries written in MQL as it once did on Freebase. 
 
-I have further code to explore the Knowledge Graph API in this repository [knowledge-graph-api](https://github.com/nchah/knowledge-graph-api).
-
-
-## Sunsetting Freebase and Wikidata Migration
-
-The migration of Freebase data to Wikidata can be tracked [here](https://www.wikidata.org/wiki/Wikidata:WikiProject_Freebase) on wikidata.org. 
-
-My personal repo to track the project and any contributions are in this [wikidata](https://github.com/nchah/wikidata) repository.
-
-. . . 
 
 ## Sources
 
